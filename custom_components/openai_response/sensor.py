@@ -29,7 +29,7 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
 
 
 def generate_openai_response_sync(model, prompt, temperature, max_tokens, top_p, frequency_penalty, presence_penalty):
-    return openai.Completion.create(
+    return openai.ChatCompletion.create(
         model=model,
         prompt=prompt,
         temperature=temperature,
